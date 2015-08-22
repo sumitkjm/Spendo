@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><project>
+	<modelVersion>4.0.0</modelVersion>
+    <groupId>com.sam.em</groupId> 
+  <artifactId>spendo-common</artifactId>
+  <packaging>jar</packaging>
+   <version>1.0</version>
+  <name>EMCommon</name>
+  
+  
+  
+  
+  <build>
+  <finalName>em-common</finalName>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>test</testSourceDirectory>
+    
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+          <execution>
+			<phase>clean</phase>
+            <goals>
+              <goal>exec</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <includeProjectDependencies>false</includeProjectDependencies>
+          <includePluginDependencies>true</includePluginDependencies>
+		  <executable>generateJaxBVo.bat</executable>
+        </configuration>
+		</plugin>
+
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <dependencies>
+  </dependencies>
+
+
+</project>

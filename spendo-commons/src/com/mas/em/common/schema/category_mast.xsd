@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+elementFormDefault="qualified" 
+xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:version="2.0">
+
+<xsd:annotation><xsd:appinfo>
+    <jaxb:globalBindings>
+      <jaxb:javaType name="java.util.Date" xmlType="xsd:date"
+        parseMethod="com.mas.em.common.JAXBDateAdapter.parseDate"
+        printMethod="com.mas.em.common.JAXBDateAdapter.printDate"/>
+    </jaxb:globalBindings>
+</xsd:appinfo></xsd:annotation>
+
+<xsd:element name="EmInfo">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="CategoryMasts"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="CategoryMasts">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="CategoryMast" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<xsd:element name="CategoryMast">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element name="CategoryID" type="xsd:int"/>
+			<xsd:element name="CategoryName" type="xsd:string"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+</xsd:schema>
