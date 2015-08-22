@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/cache
+		http://www.springframework.org/schema/cache/spring-cache.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
+   <cache:annotation-driven />
+
+<bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
+	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+	<property name="url" value="jdbc:mysql://localhost:3306/em"/>
+	<property name="username" value="root"/>
+	<property name="password" value="root"/>
+</bean>
+
+   <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager" p:cache-manager-ref="ehcache"/>
+   <bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+    <property name="configLocation"  value="classpath:ehcache.xml"/>
+   </bean>
+
+
+ <bean name="jdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate" autowire="byName">
+    <constructor-arg><ref bean="dataSource"/></constructor-arg>
+</bean>
+
+<context:annotation-config/>
+<mvc:annotation-driven />
+<context:component-scan base-package="com.mas"/>
+
+
+<!--<bean name="loginDao" class="com.mas.em.dao.LoginDao" autowire="byName">
+</bean>
+
+--><bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<property name="prefix" value="/WEB-INF/views/"/>
+<property name="suffix" value=".jsp"/>
+</bean>
+    <!-- ... -->
+
+</beans>
