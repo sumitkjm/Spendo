@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.mas.em</groupId>
+	<groupId>com.spendo</groupId>
 	<artifactId>spendo-ui</artifactId>
 	<version>1.0</version>
 	<packaging>war</packaging>
 
-	<name>expenditure-manager</name>
+	<name>spendo</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
@@ -16,7 +17,7 @@
 
 	<build>
 
-		<finalName>ExpedintureManager</finalName>
+		<finalName>spendo</finalName>
 		<resources>
 			<resource>
 				<directory>src</directory>
@@ -26,6 +27,18 @@
 			</resource>
 		</resources>
 		<plugins>
+			 <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.1.0.Alpha1</version>
+                <configuration>
+                    <domain>
+                        <server-groups>
+                            <server-group>main-server-group</server-group>
+                        </server-groups>
+                    </domain>
+                </configuration>
+            </plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -39,7 +52,7 @@
 				<configuration>
 					<url>http://127.0.0.1/manager</url>
 					<server>TomcatServer</server>
-					<path>/ExpedintureManager</path>
+					<path>/spendo</path>
 <!--					<warDirectory>C:/installedSoftwares/apache-tomcat-6.0.26/webapps/ExpedintureManager.war</warDirectory>-->
 				</configuration>
 			</plugin>
@@ -120,8 +133,8 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.sam.em</groupId>
-			<artifactId>em-common</artifactId>
+			<groupId>com.spendo</groupId>
+			<artifactId>spendo-commons</artifactId>
 			<version>1.0</version>
 			<type>jar</type>
 		</dependency>
