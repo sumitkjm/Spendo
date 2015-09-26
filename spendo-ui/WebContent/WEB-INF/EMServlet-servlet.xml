@@ -16,13 +16,20 @@
         http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
    <cache:annotation-driven />
 
+<bean id="spendoDS" class="org.springframework.jndi.JndiObjectFactoryBean" scope="singleton">
+	<property name="jndiName" value="java:jboss/datasources/spendo"/>
+	<property name="resourceRef">
+		<value>true</value>
+	</property>
+</bean>
+<!--  
 <bean id="dataSource" destroy-method="close" class="org.apache.commons.dbcp.BasicDataSource">
 	<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-	<property name="url" value="jdbc:mysql://localhost:3306/em"/>
+	<property name="url" value="jdbc:mysql://localhost:3306/spendo"/>
 	<property name="username" value="root"/>
-	<property name="password" value="root"/>
+	<property name="password" value=""/>
 </bean>
-
+-->
    <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager" p:cache-manager-ref="ehcache"/>
    <bean id="ehcache" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
     <property name="configLocation"  value="classpath:ehcache.xml"/>
@@ -30,18 +37,18 @@
 
 
  <bean name="jdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate" autowire="byName">
-    <constructor-arg><ref bean="dataSource"/></constructor-arg>
+    <constructor-arg><ref bean="spendoDS"/></constructor-arg>
 </bean>
 
 <context:annotation-config/>
 <mvc:annotation-driven />
-<context:component-scan base-package="com.mas"/>
+<context:component-scan base-package="com.mas.em"/>
 
 
-<!--<bean name="loginDao" class="com.mas.em.dao.LoginDao" autowire="byName">
+<bean name="loginDao" class="com.mas.em.dao.LoginDao" autowire="byName">
 </bean>
 
---><bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 <property name="prefix" value="/WEB-INF/views/"/>
 <property name="suffix" value=".jsp"/>
 </bean>

@@ -16,7 +16,7 @@
 <br>
 <br/>
 <div align="center" class="emlogin">
-<form name="login" method="POST" action="/ExpedintureManager/login/action">
+<form name="login" method="POST" action="/spendo/login/action">
 
 	<table align="center">
 	<tr>

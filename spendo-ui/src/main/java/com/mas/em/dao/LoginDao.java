@@ -31,7 +31,7 @@ public class LoginDao {
 
 	public boolean checkLogin(String username, String password) {
 		boolean isLoginPassed = false;
-		String loginQuery = "select count(*) as count from em_users where username='"
+		String loginQuery = "select count(*) as count from sp_users where username='"
 				+ username + "' and password='" + password + "'";
 		logger.info("LoginQuery:::" + loginQuery);
 		LoginRowCallbackHandler loginRowCallbackHandler = new LoginRowCallbackHandler();
@@ -43,7 +43,7 @@ public class LoginDao {
 	@Cacheable(value="categoryCache", key="'allCategories'")
 	public List<CategoryMast> getAllCategories() {
 		List<CategoryMast> allCategoryMasts = new ArrayList<CategoryMast>();
-		String categoryQuery = "select category_id, category_name from ep_category_mast";
+		String categoryQuery = "select category_id, category_name from sp_category_mast";
 		logger.info("Category Query:::"+categoryQuery);
 		List<Map<String, Object>> resultList = jdbcTemplate.queryForList(categoryQuery);
 		for (Map<String, Object> map : resultList) {

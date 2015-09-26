@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.spendo</groupId>
@@ -20,25 +20,25 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<finalName>spendo</finalName>
 		<resources>
 			<resource>
-				<directory>src</directory>
+				<directory>src/main/java</directory>
 				<excludes>
 					<exclude> **/*.java</exclude>
 				</excludes>
 			</resource>
 		</resources>
 		<plugins>
-			 <plugin>
-                <groupId>org.wildfly.plugins</groupId>
-                <artifactId>wildfly-maven-plugin</artifactId>
-                <version>1.1.0.Alpha1</version>
-                <configuration>
-                    <domain>
-                        <server-groups>
-                            <server-group>main-server-group</server-group>
-                        </server-groups>
-                    </domain>
-                </configuration>
-            </plugin>
+			<plugin>
+				<groupId>org.wildfly.plugins</groupId>
+				<artifactId>wildfly-maven-plugin</artifactId>
+				<version>1.1.0.Alpha1</version>
+				<configuration>
+					<domain>
+						<server-groups>
+							<server-group>main-server-group</server-group>
+						</server-groups>
+					</domain>
+				</configuration>
+			</plugin>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
@@ -53,7 +53,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 					<url>http://127.0.0.1/manager</url>
 					<server>TomcatServer</server>
 					<path>/spendo</path>
-<!--					<warDirectory>C:/installedSoftwares/apache-tomcat-6.0.26/webapps/ExpedintureManager.war</warDirectory>-->
+					<!-- <warDirectory>C:/installedSoftwares/apache-tomcat-6.0.26/webapps/ExpedintureManager.war</warDirectory> -->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -157,6 +157,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<artifactId>commons-dbcp</artifactId>
 			<version>20030825.184428</version>
 			<type>jar</type>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.6</version>
 		</dependency>
 		<dependency>
 			<groupId>hsqldb</groupId>
