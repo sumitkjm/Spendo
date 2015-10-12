@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<SpReportOutput>
+	<ExpenditureDetail>
+		<TotalExpAmount></TotalExpAmount>
+		<AvgExpAmount></AvgExpAmount>
+		<ExpCategoryDetail>
+			<TotalExpCategoryAmount></TotalExpCategoryAmount>
+			<CategoryID></CategoryID>
+			<Name></Name>
+			<ExpEntityDetail>
+				<TransactionDate></TransactionDate>
+				<Amount></Amount>
+			</ExpEntityDetail>
+		</ExpCategoryDetail>
+	</ExpenditureDetail>
+</SpReportOutput>

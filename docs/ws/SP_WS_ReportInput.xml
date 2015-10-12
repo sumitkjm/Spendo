@@ -1,0 +1,9 @@
+<?xml vesion="1.0"?>
+
+<SPReportInput>
+<UserID>sumitk</UserID>
+<DateRange>
+	<StartDate>2015-10-10</StartDate>
+	<EndDate>2015-10-11</EndDate>
+</DateRange>
+</SPReportInput>
