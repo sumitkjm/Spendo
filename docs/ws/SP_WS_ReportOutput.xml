@@ -1,15 +1,100 @@
 <?xml version="1.0"?>
 <SpReportOutput>
 	<ExpenditureDetail>
-		<TotalExpAmount></TotalExpAmount>
-		<AvgExpAmount></AvgExpAmount>
+		<TotalExpAmount>42700</TotalExpAmount>
+		<AvgDailyExpenditure>1423.33</AvgDailyExpenditure>
+		<LowestExpenditureCategories>
+			<CategoryID>2</CategoryID>
+			<Name>Medical</Name>
+			<Amount>2000</Amount>
+		</LowestExpenditureCategories>
+		<HighestExpenditureCategories>
+			<CategoryID>4</CategoryID>
+			<Name>Education</Name>
+			<Amount>32500</Amount>
+		</HighestExpenditureCategories>
 		<ExpCategoryDetail>
-			<TotalExpCategoryAmount></TotalExpCategoryAmount>
-			<CategoryID></CategoryID>
-			<Name></Name>
+			<TotalExpCategoryAmount>2000</TotalExpCategoryAmount>
+			<CategoryID>2</CategoryID>
+			<CategoryName>Medical</CategoryName>
 			<ExpEntityDetail>
-				<TransactionDate></TransactionDate>
-				<Amount></Amount>
+				<TransactionID>21189821</TransactionID>
+				<TransactionDate>2015-10-09</TransactionDate>
+				<Description>Blood test</Description>
+				<EntityID>1</EntityID>
+				<EntityName>Apollo Hospital</EntityName>
+				<Amount>1500</Amount>
+			</ExpEntityDetail>
+			<ExpEntityDetail>
+				<TransactionID>21189823</TransactionID>
+				<TransactionDate>2015-10-09</TransactionDate>
+				<Description>Medicine purchase</Description>
+				<EntityID>2</EntityID>
+				<EntityName>Apollo Pharmecy</EntityName>
+				<Amount>500</Amount>
+			</ExpEntityDetail>
+		</ExpCategoryDetail>
+		<ExpCategoryDetail>
+			<TotalExpCategoryAmount>2500</TotalExpCategoryAmount>
+			<CategoryID>1</CategoryID>
+			<CategoryName>Clothes</CategoryName>
+			<ExpEntityDetail>
+				<TransactionID>21182221</TransactionID>
+				<TransactionDate>2015-10-08</TransactionDate>
+				<Description>Clothes for daughter</Description>
+				<EntityID>10</EntityID>
+				<EntityName>Total Mall</EntityName>
+				<Amount>1100</Amount>
+			</ExpEntityDetail>
+			<ExpEntityDetail>
+				<TransactionID>21183823</TransactionID>
+				<TransactionDate>2015-10-08</TransactionDate>
+				<Description>Clothes for wife</Description>
+				<EntityID>2</EntityID>
+				<EntityName>Total Mall</EntityName>
+				<Amount>1400</Amount>
+			</ExpEntityDetail>
+		</ExpCategoryDetail>
+		<ExpCategoryDetail>
+			<TotalExpCategoryAmount>32500</TotalExpCategoryAmount>
+			<CategoryID>3</CategoryID>
+			<CategoryName>Education</CategoryName>
+			<ExpEntityDetail>
+				<TransactionID>21166221</TransactionID>
+				<TransactionDate>2015-10-15</TransactionDate>
+				<Description>Daughter school fee installation 1</Description>
+				<EntityID>15</EntityID>
+				<EntityName>Delhi Public School</EntityName>
+				<Amount>20000</Amount>
+			</ExpEntityDetail>
+			<ExpEntityDetail>
+				<TransactionID>22183823</TransactionID>
+				<TransactionDate>2015-10-20</TransactionDate>
+				<Description>Tution fee</Description>
+				<EntityID>15</EntityID>
+				<EntityName>Delhi Public School</EntityName>
+				<Amount>12500</Amount>
+			</ExpEntityDetail>
+		</ExpCategoryDetail>
+		<ExpCategoryDetail>
+			<TotalExpCategoryAmount>5700</TotalExpCategoryAmount>
+			<CategoryID>4</CategoryID>
+			<CategoryName>Food</CategoryName>
+			<ExpEntityDetail>
+				<TransactionID>21166237</TransactionID>
+				<TransactionDate>2015-10-01</TransactionDate>
+				<Description>Monthly Ration purchase</Description>
+				<EntityID>13</EntityID>
+				<EntityName>Big Bazar</EntityName>
+				<Amount>5000</Amount>
+			</ExpEntityDetail>
+			<ExpEntityDetail>
+				<TransactionID>22183813</TransactionID>
+				<TransactionDate>2015-10-03</TransactionDate>
+				<Description>Dinner on birthday</Description>
+				<EntityID>17</EntityID>
+				<EntityName>Pizza hut</EntityName>
+				<Amount>700</Amount>
 			</ExpEntityDetail>
 		</ExpCategoryDetail>
 	</ExpenditureDetail>
