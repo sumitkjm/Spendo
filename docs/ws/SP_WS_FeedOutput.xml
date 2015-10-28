@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<SPFeedOutput>
+	<UserID>sumitk</UserID>
+	<Error>
+		<Code>1</Code>
+		<Description>User Name or Password is wrong</Description>
+	</Error>
+	<Success/>
+</SPFeedOutput>

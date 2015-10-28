@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<SPFeedInput>
+	<UserID>sumitk</UserID>
+	<Feeds feedType="Category/Entity/Transaction">
+		<ExpCategory operation="Create/Update/Delete">
+			<ID>10</ID> <!-- Required only for update and delete -->
+			<Name>Food</Name>
+			<Description>Food and Bevarage items</Description>
+		</ExpCategory>
+		<ExpEntity operation="Create/Update/Delete">
+			<ID>10</ID> <!-- Required only for update and delete -->
+			<ExpCategoryID>22</ExpCategoryID>
+			<Name>Reliance Fresh</Name>
+			<Description>Grossary and Food Items</Description>
+			<Address>
+				<Stree1></Stree1>
+				<Stree2></Stree2>
+				<City></City>
+				<State></State>
+				<Country></Country>
+			</Address>
+		</ExpEntity>
+		<Transaction>
+			<TransactionID>21182221</TransactionID>
+			<TransactionDate>2015-10-08</TransactionDate>
+			<Description>Clothes for daughter</Description>
+			<EntityID>10</EntityID>
+			<EntityName>Total Mall</EntityName>
+			<Amount>1100</Amount>
+		</Transaction>
+	</Feeds>
+</SPFeedInput>
