@@ -1,5 +1,10 @@
 <?xml version="1.0"?>
 <SpReportOutput>
+	<Success/>
+	<Error>
+		<Code></Code>
+		<Description></Description>
+	</Error>
 	<ExpenditureDetail>
 		<TotalExpAmount>42700</TotalExpAmount>
 		<AvgDailyExpenditure>1423.33</AvgDailyExpenditure>
