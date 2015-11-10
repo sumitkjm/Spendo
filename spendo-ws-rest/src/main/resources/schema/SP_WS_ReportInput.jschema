@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "SPReportInput": {
+      "id": "http://jsonschema.net/SPReportInput",
+      "type": "object",
+      "properties": {
+        "UserID": {
+          "id": "http://jsonschema.net/SPReportInput/UserID",
+          "type": "string"
+        },
+        "DateRange": {
+          "id": "http://jsonschema.net/SPReportInput/DateRange",
+          "type": "object",
+          "properties": {
+            "StartDate": {
+              "id": "http://jsonschema.net/SPReportInput/DateRange/StartDate",
+              "type": "string"
+            },
+            "EndDate": {
+              "id": "http://jsonschema.net/SPReportInput/DateRange/EndDate",
+              "type": "string"
+            }
+          }
+        }
+      },
+      "required": [
+        "UserID",
+        "DateRange"
+      ]
+    }
+  },
+  "required": [
+    "SPReportInput"
+  ]
+}

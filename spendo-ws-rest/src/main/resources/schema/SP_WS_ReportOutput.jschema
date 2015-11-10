@@ -1,0 +1,417 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "SPReportOutput": {
+      "id": "http://jsonschema.net/SPReportOutput",
+      "type": "object",
+      "properties": {
+        "Error": {
+          "id": "http://jsonschema.net/SPReportOutput/Error",
+          "type": "object",
+          "properties": {}
+        },
+        "ExpenditureDetail": {
+          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail",
+          "type": "object",
+          "properties": {
+            "TotalExpAmount": {
+              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/TotalExpAmount",
+              "type": "string"
+            },
+            "AvgDailyExpenditure": {
+              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/AvgDailyExpenditure",
+              "type": "string"
+            },
+            "LowestExpenditureCategories": {
+              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/LowestExpenditureCategories",
+              "type": "object",
+              "properties": {
+                "CategoryID": {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/LowestExpenditureCategories/CategoryID",
+                  "type": "string"
+                },
+                "Name": {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/LowestExpenditureCategories/Name",
+                  "type": "string"
+                },
+                "Amount": {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/LowestExpenditureCategories/Amount",
+                  "type": "string"
+                }
+              }
+            },
+            "HighestExpenditureCategories": {
+              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/HighestExpenditureCategories",
+              "type": "object",
+              "properties": {
+                "CategoryID": {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/HighestExpenditureCategories/CategoryID",
+                  "type": "string"
+                },
+                "Name": {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/HighestExpenditureCategories/Name",
+                  "type": "string"
+                },
+                "Amount": {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/HighestExpenditureCategories/Amount",
+                  "type": "string"
+                }
+              }
+            },
+            "ExpCategoryDetail": {
+              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail",
+              "type": "array",
+              "items": [
+                {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0",
+                  "type": "object",
+                  "properties": {
+                    "TotalExpCategoryAmount": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/TotalExpCategoryAmount",
+                      "type": "string"
+                    },
+                    "CategoryID": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/CategoryID",
+                      "type": "string"
+                    },
+                    "CategoryName": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/CategoryName",
+                      "type": "string"
+                    },
+                    "ExpEntityDetail": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/0",
+                          "type": "object",
+                          "properties": {
+                            "TransactionID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/0/TransactionID",
+                              "type": "string"
+                            },
+                            "TransactionDate": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/0/TransactionDate",
+                              "type": "string"
+                            },
+                            "Description": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/0/Description",
+                              "type": "string"
+                            },
+                            "EntityID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/0/EntityID",
+                              "type": "string"
+                            },
+                            "EntityName": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/0/EntityName",
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/0/Amount",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/1",
+                          "type": "object",
+                          "properties": {
+                            "TransactionID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/1/TransactionID",
+                              "type": "string"
+                            },
+                            "TransactionDate": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/1/TransactionDate",
+                              "type": "string"
+                            },
+                            "Description": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/1/Description",
+                              "type": "string"
+                            },
+                            "EntityID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/1/EntityID",
+                              "type": "string"
+                            },
+                            "EntityName": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/1/EntityName",
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/0/ExpEntityDetail/1/Amount",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1",
+                  "type": "object",
+                  "properties": {
+                    "TotalExpCategoryAmount": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/TotalExpCategoryAmount",
+                      "type": "string"
+                    },
+                    "CategoryID": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/CategoryID",
+                      "type": "string"
+                    },
+                    "CategoryName": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/CategoryName",
+                      "type": "string"
+                    },
+                    "ExpEntityDetail": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/0",
+                          "type": "object",
+                          "properties": {
+                            "TransactionID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/0/TransactionID",
+                              "type": "string"
+                            },
+                            "TransactionDate": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/0/TransactionDate",
+                              "type": "string"
+                            },
+                            "Description": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/0/Description",
+                              "type": "string"
+                            },
+                            "EntityID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/0/EntityID",
+                              "type": "string"
+                            },
+                            "EntityName": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/0/EntityName",
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/0/Amount",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/1",
+                          "type": "object",
+                          "properties": {
+                            "TransactionID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/1/TransactionID",
+                              "type": "string"
+                            },
+                            "TransactionDate": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/1/TransactionDate",
+                              "type": "string"
+                            },
+                            "Description": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/1/Description",
+                              "type": "string"
+                            },
+                            "EntityID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/1/EntityID",
+                              "type": "string"
+                            },
+                            "EntityName": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/1/EntityName",
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/1/ExpEntityDetail/1/Amount",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2",
+                  "type": "object",
+                  "properties": {
+                    "TotalExpCategoryAmount": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/TotalExpCategoryAmount",
+                      "type": "string"
+                    },
+                    "CategoryID": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/CategoryID",
+                      "type": "string"
+                    },
+                    "CategoryName": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/CategoryName",
+                      "type": "string"
+                    },
+                    "ExpEntityDetail": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/0",
+                          "type": "object",
+                          "properties": {
+                            "TransactionID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/0/TransactionID",
+                              "type": "string"
+                            },
+                            "TransactionDate": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/0/TransactionDate",
+                              "type": "string"
+                            },
+                            "Description": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/0/Description",
+                              "type": "string"
+                            },
+                            "EntityID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/0/EntityID",
+                              "type": "string"
+                            },
+                            "EntityName": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/0/EntityName",
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/0/Amount",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/1",
+                          "type": "object",
+                          "properties": {
+                            "TransactionID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/1/TransactionID",
+                              "type": "string"
+                            },
+                            "TransactionDate": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/1/TransactionDate",
+                              "type": "string"
+                            },
+                            "Description": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/1/Description",
+                              "type": "string"
+                            },
+                            "EntityID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/1/EntityID",
+                              "type": "string"
+                            },
+                            "EntityName": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/1/EntityName",
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/2/ExpEntityDetail/1/Amount",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3",
+                  "type": "object",
+                  "properties": {
+                    "TotalExpCategoryAmount": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/TotalExpCategoryAmount",
+                      "type": "string"
+                    },
+                    "CategoryID": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/CategoryID",
+                      "type": "string"
+                    },
+                    "CategoryName": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/CategoryName",
+                      "type": "string"
+                    },
+                    "ExpEntityDetail": {
+                      "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail",
+                      "type": "array",
+                      "items": [
+                        {
+                          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/0",
+                          "type": "object",
+                          "properties": {
+                            "TransactionID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/0/TransactionID",
+                              "type": "string"
+                            },
+                            "TransactionDate": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/0/TransactionDate",
+                              "type": "string"
+                            },
+                            "Description": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/0/Description",
+                              "type": "string"
+                            },
+                            "EntityID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/0/EntityID",
+                              "type": "string"
+                            },
+                            "EntityName": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/0/EntityName",
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/0/Amount",
+                              "type": "string"
+                            }
+                          }
+                        },
+                        {
+                          "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/1",
+                          "type": "object",
+                          "properties": {
+                            "TransactionID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/1/TransactionID",
+                              "type": "string"
+                            },
+                            "TransactionDate": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/1/TransactionDate",
+                              "type": "string"
+                            },
+                            "Description": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/1/Description",
+                              "type": "string"
+                            },
+                            "EntityID": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/1/EntityID",
+                              "type": "string"
+                            },
+                            "EntityName": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/1/EntityName",
+                              "type": "string"
+                            },
+                            "Amount": {
+                              "id": "http://jsonschema.net/SPReportOutput/ExpenditureDetail/ExpCategoryDetail/3/ExpEntityDetail/1/Amount",
+                              "type": "string"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "required": [
+        "Error",
+        "ExpenditureDetail"
+      ]
+    }
+  },
+  "required": [
+    "SPReportOutput"
+  ]
+}
