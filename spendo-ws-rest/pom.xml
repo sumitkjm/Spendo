@@ -124,24 +124,24 @@
 			</plugins>
 		</pluginManagement>
 		<plugins>
-				<plugin>
-					<groupId>org.jsonschema2pojo</groupId>
-					<artifactId>jsonschema2pojo-maven-plugin</artifactId>
-					<version>0.4.16</version>
-					<executions>
-						<execution>
-							<id>add-source</id>
-							<phase>generate-sources</phase>
-							<goals>
-								<goal>generate</goal>
-							</goals>
-						</execution>
-					</executions>
-					<configuration>
-						<sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
-						<targetPackage>org.spendo.ws.rest.vo.json</targetPackage>
-					</configuration>
-				</plugin>
+			<plugin>
+				<groupId>org.jsonschema2pojo</groupId>
+				<artifactId>jsonschema2pojo-maven-plugin</artifactId>
+				<version>0.4.16</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sourceDirectory>${basedir}/src/main/resources/schema</sourceDirectory>
+					<targetPackage>org.spendo.reportws.vo.json</targetPackage>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.tomcat.maven</groupId>
 				<artifactId>tomcat7-maven-plugin</artifactId>

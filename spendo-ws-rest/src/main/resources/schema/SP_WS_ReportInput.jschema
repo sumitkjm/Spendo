@@ -3,36 +3,38 @@
   "id": "http://jsonschema.net",
   "type": "object",
   "properties": {
-    "SPReportInput": {
-      "id": "http://jsonschema.net/SPReportInput",
+    "spReportInput": {
+      "id": "http://jsonschema.net/spReportInput",
       "type": "object",
       "properties": {
-        "UserID": {
-          "id": "http://jsonschema.net/SPReportInput/UserID",
+        "userID": {
+          "id": "http://jsonschema.net/spReportInput/userID",
           "type": "string"
         },
-        "DateRange": {
-          "id": "http://jsonschema.net/SPReportInput/DateRange",
+        "dateRange": {
+          "id": "http://jsonschema.net/spReportInput/dateRange",
           "type": "object",
           "properties": {
-            "StartDate": {
-              "id": "http://jsonschema.net/SPReportInput/DateRange/StartDate",
-              "type": "string"
+            "startDate": {
+              "id": "http://jsonschema.net/spReportInput/dateRange/startDate",
+              "type": "string",
+              "format" : "date-time"
             },
-            "EndDate": {
-              "id": "http://jsonschema.net/SPReportInput/DateRange/EndDate",
-              "type": "string"
+            "endDate": {
+              "id": "http://jsonschema.net/spReportInput/dateRange/endDate",
+              "type": "string",
+              "format" : "date-time"
             }
           }
         }
       },
       "required": [
-        "UserID",
-        "DateRange"
+        "userID",
+        "dateRange"
       ]
     }
   },
   "required": [
-    "SPReportInput"
+    "spReportInput"
   ]
 }
