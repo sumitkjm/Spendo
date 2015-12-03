@@ -1,4 +1,4 @@
-package org.spendo.persistence.hibernate.entity;
+package org.spendo.persistence.entity;
 
 import java.util.Date;
 
