@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -19,11 +20,11 @@ public class SpIncomeTransaction {
 	private int incomeTransactionId;
 	
 	@ManyToOne
-	@Column(name="sp_users")
+	@JoinColumn(name="sp_users")
 	private SpUsers spUsers;
 	
 	@ManyToOne
-	@Column(name="income_source_id")
+	@JoinColumn(name="income_source_id")
 	private SpIncomeSourceMast incomeSourceId;
 	
 	@Column(name="transaction_date")

@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -18,7 +19,7 @@ public class SpExpenditureEntity {
 	private int id;
 	
 	@ManyToOne
-	@Column(name="exp_category_id")
+	@JoinColumn(name="exp_category_id")
 	private SpExpenditureCategoryMast expCategoryId;
 	
 	@Column(name="name")

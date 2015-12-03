@@ -44,7 +44,7 @@ public class SpUsers {
 	@Column(name="modified_date")
 	private Date modifiedDate;
 	
-	public SpUsers()
+	public SpUsers(){}
 
 	public int getUserId() {
 		return userId;

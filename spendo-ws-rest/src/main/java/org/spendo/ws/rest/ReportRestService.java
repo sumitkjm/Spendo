@@ -10,6 +10,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
+import org.spendo.persistence.CategoryStoreData;
+import org.spendo.persistence.entity.SpExpenditureCategoryMast;
 import org.spendo.reportws.vo.json.ExpCategoryDetail;
 import org.spendo.reportws.vo.json.ExpEntityDetail;
 import org.spendo.reportws.vo.json.ExpenditureDetail;
@@ -23,20 +25,21 @@ public class ReportRestService {
 	
 	@GET
     @Produces("application/json")
-	@HeaderParam("Accept:application/oracle.com.cloud.common.Blackout+json")
 	@Path("/expenditure-details")
 	public Response getExpenditureDetails() {
-		return Response.ok().entity(formDummyOutput()).build();
+		CategoryStoreData categoryStoreData = new CategoryStoreData();
+		SpExpenditureCategoryMast spExpenditureCategoryMast = categoryStoreData.fetchCategoryData(2);
+		return Response.ok().entity(formDummyOutput(spExpenditureCategoryMast)).build();
 	}
 	
-	private SPWSReportOutput formDummyOutput() {
+	private SPWSReportOutput formDummyOutput(SpExpenditureCategoryMast spExpenditureCategoryMast) {
 		SPWSReportOutput spWSReportOutput = new SPWSReportOutput();
 		SpReportOutput spReportOutput = new SpReportOutput();
 		ExpenditureDetail expenditureDetail = new ExpenditureDetail();
 		List<ExpCategoryDetail> expenditureDetailList = expenditureDetail.getExpCategoryDetail();
 		ExpCategoryDetail expCategoryDetail = new ExpCategoryDetail();
-		expCategoryDetail.setCategoryID(1);
-		expCategoryDetail.setCategoryName("Food");
+		expCategoryDetail.setCategoryID(spExpenditureCategoryMast.getExpCategoryId());
+		expCategoryDetail.setCategoryName(spExpenditureCategoryMast.getCategoryName());
 		expCategoryDetail.setTotalExpCategoryAmount(2000.0);
 		List<ExpEntityDetail> expEntityDetailList = expCategoryDetail.getExpEntityDetail();
 		ExpEntityDetail expEntityDetail = new ExpEntityDetail();
