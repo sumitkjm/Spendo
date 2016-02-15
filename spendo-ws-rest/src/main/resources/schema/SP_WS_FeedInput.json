@@ -1,0 +1,32 @@
+{
+  "spfeedInput": {
+    "userID": "sumitk",
+    "feeds": {
+      "feedType": "Category/Entity/Transaction",
+      "expCategory": {
+        "operation": "Create/Update/Delete",
+        "id": "10",
+        "name": "Food",
+        "description": "Food and Bevarage items"
+      },
+      "expEntity": {
+        "operation": "Create/Update/Delete",
+        "id": "10",
+        "expCategoryID": "22",
+        "name": "Reliance Fresh",
+        "description": "Grossary and Food Items",
+        "address": {
+          
+        }
+      },
+      "transaction": {
+        "transactionID": "21182221",
+        "transactionDate": "2015-10-08T07:00:28.000+0530",
+        "description": "Clothes for daughter",
+        "entityID": "10",
+        "entityName": "Total Mall",
+        "amount": "1100"
+      }
+    }
+  }
+}
