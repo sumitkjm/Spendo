@@ -8,7 +8,7 @@
 <%@page import="java.util.List"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Expenditure Manager Category Page</title>
+<title>Spendo Category Page</title>
 </head>
 <body>
 <% Object hSession = session.getAttribute("username");
@@ -19,7 +19,7 @@ if(hSession==null) {
 Welcome <%=session.getAttribute("username") %>!
 <div align="center" class="category">
 <p>This is category manager page</p>
-<form name="category" action="http://localhost:8080/EMServer/EMCategoryController.do">
+<form name="category" action="http://localhost:8080/spendo/EMCategoryController.do">
 	<input type="submit" name="action" value="LoadCategories"/>
 	</form>
 </div>

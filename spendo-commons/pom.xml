@@ -15,7 +15,7 @@
     <testSourceDirectory>test</testSourceDirectory>
     
     <plugins>
-      <plugin>
+<!--       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>1.2.1</version>
@@ -32,7 +32,7 @@
           <includePluginDependencies>true</includePluginDependencies>
 		  <executable>generateJaxBVo.bat</executable>
         </configuration>
-		</plugin>
+		</plugin> -->
 
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -41,9 +41,55 @@
           <target>1.6</target>
         </configuration>
       </plugin>
+			<plugin>
+				<groupId>org.jsonschema2pojo</groupId>
+				<artifactId>jsonschema2pojo-maven-plugin</artifactId>
+				<version>0.4.16</version>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sourceDirectory>${basedir}/src/resources/schema</sourceDirectory>
+					<targetPackage>org.spendo.commons.vo.json</targetPackage>
+				</configuration>
+			</plugin>
     </plugins>
   </build>
-  <dependencies>
+	<properties>
+		<jackson.version>1.8.6</jackson.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.4</version>
+		</dependency>
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-mapper-asl</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-jaxrs</artifactId>
+			<version>${jackson.version}</version>
+		</dependency>
   </dependencies>
 
 

@@ -14,7 +14,7 @@ public class HibernateUtil {
 	 * Open the session from sessionFactory.
 	 * @return Session Object opened
 	 */
-	public Session getSession() {
+	public static Session getSession() {
 		if (sessionFactory == null) {
 			initializeSessionFactory();
 		}

@@ -15,16 +15,16 @@
           "id": "http://jsonschema.net/SPFeedInput/Feeds",
           "type": "object",
           "properties": {
-            "-feedType": {
-              "id": "http://jsonschema.net/SPFeedInput/Feeds/-feedType",
+            "FeedType": {
+              "id": "http://jsonschema.net/SPFeedInput/Feeds/FeedType",
               "type": "string"
             },
             "ExpCategory": {
               "id": "http://jsonschema.net/SPFeedInput/Feeds/ExpCategory",
               "type": "object",
               "properties": {
-                "-operation": {
-                  "id": "http://jsonschema.net/SPFeedInput/Feeds/ExpCategory/-operation",
+                "Operation": {
+                  "id": "http://jsonschema.net/SPFeedInput/Feeds/ExpCategory/Operation",
                   "type": "string"
                 },
                 "ID": {
@@ -45,8 +45,8 @@
               "id": "http://jsonschema.net/SPFeedInput/Feeds/ExpEntity",
               "type": "object",
               "properties": {
-                "-operation": {
-                  "id": "http://jsonschema.net/SPFeedInput/Feeds/ExpEntity/-operation",
+                "Operation": {
+                  "id": "http://jsonschema.net/SPFeedInput/Feeds/ExpEntity/Operation",
                   "type": "string"
                 },
                 "ID": {

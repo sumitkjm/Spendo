@@ -9,6 +9,7 @@ import java.util.Map;
 import javax.sql.DataSource;
 
 import org.apache.log4j.Logger;
+import org.spendo.commons.vo.json.ExpCategoryDetail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -41,7 +42,7 @@ public class LoginDao {
 	}
 	
 	@Cacheable(value="categoryCache", key="'allCategories'")
-	public List<CategoryMast> getAllCategories() {
+	public List<ExpCategoryDetail> getAllCategories() {
 		List<CategoryMast> allCategoryMasts = new ArrayList<CategoryMast>();
 		String categoryQuery = "select category_id, category_name from sp_category_mast";
 		logger.info("Category Query:::"+categoryQuery);

@@ -37,6 +37,8 @@ public class SpUsersTest {
     public void readSpUsers() {
     	SpUsers spUsers = (SpUsers) session.get(SpUsers.class, 8);
     	Assert.assertEquals(spUsers.getEmailId(), "sumit.g.kumar@oracle.com");
+    	System.out.println(sessionFactory.openSession().hashCode());
+    	System.out.println(sessionFactory.openSession().hashCode());
     }
     
     @Test
