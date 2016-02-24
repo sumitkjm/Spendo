@@ -5,35 +5,12 @@
   <packaging>jar</packaging>
    <version>1.0</version>
   <name>spendo-commons</name>
-  
-  
-  
-  
   <build>
   <finalName>spendo-commons</finalName>
     <sourceDirectory>src</sourceDirectory>
     <testSourceDirectory>test</testSourceDirectory>
     
     <plugins>
-<!--       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.2.1</version>
-        <executions>
-          <execution>
-			<phase>clean</phase>
-            <goals>
-              <goal>exec</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <includeProjectDependencies>false</includeProjectDependencies>
-          <includePluginDependencies>true</includePluginDependencies>
-		  <executable>generateJaxBVo.bat</executable>
-        </configuration>
-		</plugin> -->
-
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>

@@ -17,7 +17,7 @@
    <cache:annotation-driven />
 
 <bean id="spendoDS" class="org.springframework.jndi.JndiObjectFactoryBean" scope="singleton">
-	<property name="jndiName" value="java:jboss/datasources/spendo"/>
+	<property name="jndiName" value="java:jboss/datasources/spendo_new"/>
 	<property name="resourceRef">
 		<value>true</value>
 	</property>
@@ -42,10 +42,10 @@
 
 <context:annotation-config/>
 <mvc:annotation-driven />
-<context:component-scan base-package="com.mas.em"/>
+<context:component-scan base-package="org.spendo.ui"/>
 
 
-<bean name="loginDao" class="com.mas.em.dao.LoginDao" autowire="byName">
+<bean name="loginDao" class="org.spendo.ui.dao.LoginDao" autowire="byName">
 </bean>
 
 <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

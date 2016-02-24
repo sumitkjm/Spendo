@@ -4,7 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<%@page import="com.mas.em.common.vo.category.CategoryMasts"%>
+<%@page import="org.spendo.commons.vo.json.ExpCategory"%>
 <%@page import="java.util.List"%>
 <html>
 <head>
@@ -19,12 +19,15 @@
 <tr>
 	<td> CategoryID</td>
 	<td> CategoryName</td>
+	<td> Description</td>
 </tr>
 <c:forEach items="${allCategoryMasts}" var="categoryMast">    
     <TR>
-        <TD> ${categoryMast.categoryID}
+        <TD> ${categoryMast.id}
         </TD>
-        <TD>${categoryMast.categoryName}
+        <TD>${categoryMast.name}
+        </TD>
+        <TD>${categoryMast.description}
         </TD>
     </TR>
 </c:forEach>

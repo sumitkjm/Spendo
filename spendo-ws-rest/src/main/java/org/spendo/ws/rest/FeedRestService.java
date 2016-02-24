@@ -7,9 +7,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
-import org.spendo.reportws.vo.json.SPFeedOutput;
-import org.spendo.reportws.vo.json.SPWSFeedInput;
-import org.spendo.reportws.vo.json.SPWSFeedOutput;
+import org.spendo.commons.vo.json.SpFeedOutput;
+import org.spendo.commons.vo.json.SPWSFeedInput;
+import org.spendo.commons.vo.json.SPWSFeedOutput;
 
 @Path("/feed-rest-service")
 public class FeedRestService {
@@ -24,9 +24,9 @@ public class FeedRestService {
 	
 	private SPWSFeedOutput createDummyFeed() {
 		SPWSFeedOutput spwsFeedOutput = new SPWSFeedOutput();
-		SPFeedOutput spFeedOutput = new SPFeedOutput();
+		SpFeedOutput spFeedOutput = new SpFeedOutput();
 		spFeedOutput.setUserID("sumitk");
-		spwsFeedOutput.setSPFeedOutput(spFeedOutput);
+		spwsFeedOutput.setSpFeedOutput(spFeedOutput);
 		return spwsFeedOutput;
 	}
 

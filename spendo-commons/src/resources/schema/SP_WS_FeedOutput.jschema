@@ -3,36 +3,36 @@
   "id": "http://jsonschema.net",
   "type": "object",
   "properties": {
-    "SPFeedOutput": {
-      "id": "http://jsonschema.net/SPFeedOutput",
+    "spFeedOutput": {
+      "id": "http://jsonschema.net/spFeedOutput",
       "type": "object",
       "properties": {
-        "UserID": {
-          "id": "http://jsonschema.net/SPFeedOutput/UserID",
+        "userID": {
+          "id": "http://jsonschema.net/spFeedOutput/userID",
           "type": "string"
         },
-        "Error": {
-          "id": "http://jsonschema.net/SPFeedOutput/Error",
+        "error": {
+          "id": "http://jsonschema.net/spFeedOutput/error",
           "type": "object",
           "properties": {
-            "Code": {
-              "id": "http://jsonschema.net/SPFeedOutput/Error/Code",
+            "code": {
+              "id": "http://jsonschema.net/spFeedOutput/error/code",
               "type": "string"
             },
-            "Description": {
-              "id": "http://jsonschema.net/SPFeedOutput/Error/Description",
+            "description": {
+              "id": "http://jsonschema.net/spFeedOutput/error/description",
               "type": "string"
             }
           }
         }
       },
       "required": [
-        "UserID",
-        "Error"
+        "userID",
+        "error"
       ]
     }
   },
   "required": [
-    "SPFeedOutput"
+    "spFeedOutput"
   ]
 }

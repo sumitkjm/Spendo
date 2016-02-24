@@ -11,12 +11,12 @@ import javax.ws.rs.core.Response;
 
 import org.spendo.persistence.CategoryStoreData;
 import org.spendo.persistence.entity.SpExpenditureCategoryMast;
-import org.spendo.reportws.vo.json.ExpCategoryDetail;
-import org.spendo.reportws.vo.json.ExpEntityDetail;
-import org.spendo.reportws.vo.json.ExpenditureDetail;
-import org.spendo.reportws.vo.json.SPWSReportInput;
-import org.spendo.reportws.vo.json.SPWSReportOutput;
-import org.spendo.reportws.vo.json.SpReportOutput;
+import org.spendo.commons.vo.json.ExpCategoryDetail;
+import org.spendo.commons.vo.json.ExpEntityDetail;
+import org.spendo.commons.vo.json.ExpenditureDetail;
+import org.spendo.commons.vo.json.SPWSReportInput;
+import org.spendo.commons.vo.json.SPWSReportOutput;
+import org.spendo.commons.vo.json.SpReportOutput;
 
 
 @Path("/report-rest-service")

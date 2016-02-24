@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ page import="com.mas.em.client.*" %>
-<%@ page import="com.mas.em.common.vo.category.*" %>
+<%@ page import="org.spendo.commons.vo.json.*" %>
+<%@ page import="org.spendo.commons.vo.json.ExpCategory" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 
-<%@page import="com.mas.em.common.vo.category.CategoryMasts"%>
+<%@page import="org.spendo.commons.vo.json.ExpCategory"%>
 <%@page import="java.util.List"%><html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -28,16 +28,16 @@ Welcome <%=session.getAttribute("username") %>!
 	<td> CategoryID</td>
 	<td> CategoryName</td>
 </tr>
-<% 
-List<CategoryMast> categoryMastList = CategoryClient.getCategoryInfo().getCategoryMast();
+<%-- <% 
+List<ExpCategory> categoryMastList = ;
 for(int row=0; row < categoryMastList.size(); row++) { %>
     <TR>
-        <TD> <%=categoryMastList.get(row).getCategoryID()%>
+        <TD> <%=categoryMastList.get(row).getID()%>
         </TD>
-        <TD><%=categoryMastList.get(row).getCategoryName()%>
+        <TD><%=categoryMastList.get(row).getName()%>
         </TD>
     </TR>
 <% } %>
-</TABLE>
+ --%></TABLE>
 </body>
 </html>
