@@ -1,3 +1,5 @@
+create database spendo_db;
+
 CREATE TABLE sp_users (
   user_id INT NOT NULL AUTO_INCREMENT,
   user_login VARCHAR(50) NULL,
@@ -85,7 +87,7 @@ CREATE TABLE sp_expenditure_transaction (
   created_date DATETIME NULL,
   modified_date DATETIME NULL,
   PRIMARY KEY(sp_transaction_id),
-  INDEX sp_expenditure_transaction_FKIndex2(user_id),
+  INDEX sp_expenditure_transaction_FKIndex1(user_id),
   INDEX sp_expenditure_transaction_FKIndex2(exp_entity_id),
   FOREIGN KEY(user_id)
     REFERENCES sp_users(user_id)

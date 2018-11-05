@@ -40,8 +40,8 @@ public class FeedHibUtilTest {
 
     @Test
     public void testGetCategoryById() {
-    	SpExpenditureCategoryMast expCategory = feedHibUtil.getSpExpCategoryById(2);
-    	Assert.assertEquals("Medical", expCategory.getCategoryName());
+    	SpExpenditureCategoryMast expCategory = feedHibUtil.getSpExpCategoryById(1);
+    	Assert.assertEquals("TestJunitCategory", expCategory.getCategoryName());
     }
     
     @Test
