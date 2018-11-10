@@ -18,7 +18,8 @@ public class FeedRestService {
     @Produces("application/json")
 	@Consumes("application/json")
 	@Path("/persist-feed")
-	public Response persistFeed(SPWSFeedInput spwsFeedInput) {
+	public Response persistFeed(SPWSFeedInput
+											spwsFeedInput) {
 		spwsFeedInput.getSpFeedInput();
 		return Response.ok().entity(createDummyFeed()).build();
 	}

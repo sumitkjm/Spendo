@@ -23,7 +23,6 @@
     </dependency>
   </dependencies>
   <modules>
-  	<module>spendo-commons</module>
     <module>spendo-persistence</module>
   	<module>spendo-ui</module>
     <module>spendo-ws-rest</module>
